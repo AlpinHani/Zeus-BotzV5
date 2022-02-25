@@ -30,7 +30,7 @@ let list = []
 ]
 const buttonsMessage = {
     contentText: `
-Nih Kak Kontak Owner Saya Jangan Di Spam Kak
+Nih Kak Kontak Ownernya >///<
 `.trim(),    footerText: ``,
     buttons: buttons,
   headerType: 'EMPTY'
