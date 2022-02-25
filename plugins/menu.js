@@ -200,42 +200,44 @@ let totaljadibot = [...new Set([...global.conns.filter(conn => conn.user && conn
     })
     if (teks == '404') {
     throw ` 
-┌〔 DAFTAR MENU 〕─•
-┏━━〔 Status 〕━
-┃❏ Runtime ${uptime}
-(${muptime})
-┃❏ *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
-┃❏ *${totaljadibot.length}* Jadibot
-┃❏ *${conn.blocklist.length}* Terblock
-┃❏ *${Object.keys(global.db.data.users).length}* Pengguna
-┃❏ *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
-┃❏ *Database: ${rtotalreg} dari ${totalreg}*
-├❏ ${_p + command} all
-├❏ ${_p + command} game
-├❏ ${_p + command} rpg 
-├❏ ${_p + command} jadian
-├❏ ${_p + command} xp
-├❏ ${_p + command} stiker
-├❏ ${_p + command} kerangajaib
-├❏ ${_p + command} photo
-├❏ ${_p + command} quotes
-├❏ ${_p + command} admin
-├❏ ${_p + command} grup
-├❏ ${_p + command} premium
-├❏ ${_p + command} internet
-├❏ ${_p + command} anonymous
-├❏ ${_p + command} nulis
-├❏ ${_p + command} downloader
-├❏ ${_p + command} tools
-├❏ ${_p + command} fun
-├❏ ${_p + command} database
-├❏ ${_p + command} vote
-├❏ ${_p + command} quran
-├❏ ${_p + command} audio
-├❏ ${_p + command} jadibot
-├❏ ${_p + command} info
-├❏ ${_p + command} tanpakategori
-├❏ ${_p + command} owner
+┌〔 DAFTAR MENU 〕─➤
+┏━━ ✘ Status ✘ ━━ ➤
+┃⬡ ☁️ Runtime ${uptime}
+(${muptime}) ©AlpinXD
+┃⬡ ⛔ *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
+┃⬡🪀 *${totaljadibot.length}* Jadibot
+┃⬡ 🚧 *${conn.blocklist.length}* Terblock
+┃⬡ 📈 *${Object.keys(global.db.data.users).length}* Pengguna
+┃⬡ 🚫 *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
+┃⬡📱 *Database: ${rtotalreg} dari ${totalreg}*
+┃⬡ 🔋 *${conn.battery != undefined ? `${conn.battery.value}%* ${conn.battery.live ? '🔌 pengisian' : ''}` : ' tidak diketahui'}
+└─────────────────➤
+├➤ ${_p + command} 𝙰𝚕𝚕
+├➤ ${_p + command} 𝙶𝚊𝚖𝚎
+├➤ ${_p + command} 𝚁𝚙𝚐 
+├➤ ${_p + command} 𝙹𝚊𝚍𝚒𝚊𝚗
+├➤ ${_p + command} 𝙴𝚡𝚙
+├➤ ${_p + command} 𝚂𝚝𝚒𝚌𝚔𝚎𝚛
+├➤ ${_p + command} 𝙺𝚎𝚛𝚊𝚗𝚐𝚓𝚊𝚒𝚋
+├➤ ${_p + command} 𝙿𝚑𝚘𝚝𝚘
+├➤ ${_p + command} 𝚀𝚞𝚘𝚝𝚎𝚜
+├➤ ${_p + command} 𝙰𝚍𝚖𝚒𝚗
+├➤ ${_p + command} 𝙶𝚛𝚞𝚙
+├➤ ${_p + command} 𝙿𝚛𝚎𝚖𝚒𝚞𝚖
+├➤ ${_p + command} 𝙸𝚗𝚝𝚎𝚛𝚗𝚎𝚝
+├➤ ${_p + command} 𝙰𝚗𝚘𝚗𝚢𝚖𝚘𝚞𝚜
+├➤ ${_p + command} 𝙽𝚞𝚕𝚒𝚜
+├➤ ${_p + command} 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚎𝚛
+├➤ ${_p + command} 𝚃𝚘𝚘𝚕𝚜
+├➤ ${_p + command} 𝙵𝚞𝚗
+├➤ ${_p + command} 𝙳𝚊𝚝𝚊𝚋𝚊𝚜𝚎
+├➤ ${_p + command} 𝚅𝚘𝚝𝚎
+├➤ ${_p + command} 𝚀𝚞𝚛𝚊𝚗
+├➤ ${_p + command} 𝙰𝚞𝚍𝚒𝚘
+├➤ ${_p + command} 𝙹𝚊𝚍𝚒𝚋𝚘𝚝
+├➤ ${_p + command} 𝙸𝚗𝚏𝚘
+├➤ ${_p + command} 𝙽𝚘𝚔𝚊𝚝𝚎𝚐𝚘𝚛𝚒
+├➤ ${_p + command} 𝙾𝚠𝚗𝚎𝚛
 └────•
 `.trim()
 }
