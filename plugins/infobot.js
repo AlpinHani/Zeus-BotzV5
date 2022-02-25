@@ -23,7 +23,7 @@ let handler  = async (m, { conn, usedPrefix }) => {
 ║
 ╠═〘 DONASI 〙 ═
 ╠➥ DANA [089625556161]
-╠➥ PULSA [089625556161]
+╠➥ PULSA [082287750102]
 ║
 ║
 ║${readMore}
@@ -41,12 +41,12 @@ let handler  = async (m, { conn, usedPrefix }) => {
 ║ 
 ╠═ ©2021 ${package.name}
 ╠═ Scrip original by Norutomo
-╠═ Creator : PilarTod
+╠═ Creator : AlpinXD
 ╠═ Api xsteam :St4r
 ╠═ Resta
 ╠═ Ariq
 ╠═〘 BOTRADITYA 〙 ═`.trim()
-     await conn.send2ButtonLoc(m.chat, await(await fetch(image)).buffer(), str, '©ZeusBot ⁩×͜×', 'Owner', '.owner', 'Menu', '.menu', m)
+     await conn.send2ButtonLoc(m.chat, await(await fetch(image)).buffer(), str, '©AlpinXD ⁩×͜×', 'Owner', '.owner', 'Menu', '.menu', m)
 }
 handler.help = ['infobot']
 handler.tags = ['info']
