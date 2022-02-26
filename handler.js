@@ -571,7 +571,7 @@ module.exports = {
                 .setBackground("https://telegra.ph/file/89a6260f0a6720240e698.jpg")
                 .toAttachment()
 
-              this.sendButtonImg(jid, action === 'add' ? wel.toBuffer() : lea.toBuffer(), text, action === 'add' ? 'Welcome Message' : 'Leave Message', action === 'add' ? 'Welcome👋' : 'Byee👋',action === 'add' ? 'Welcome👋' : 'Byee👋', {
+              this.sendButtonImg(jid, action === 'add' ? wel.toBuffer() : lea.toBuffer(), text, action === 'add' ? 'Welcome Message' : 'Leave Message', action === 'add' ? 'Welcome beban👋' : 'Semoga tenang di alam sana👋',action === 'add' ? 'Welcome beban👋' : 'Semoga tenang di alam sana👋', {
 key: {
 fromMe: false,
 participant: '0@s.whatsapp.net',
@@ -662,7 +662,7 @@ global.dfail = (type, m, conn) => {
   }[type]
   if (botAdmin) return conn.sendButton(m.chat, botAdmin, 'lupa saya', 'Eh iya ya', 'Nanii', m)
   let unreg = {
-    unreg: `Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar pler.16*`
+    unreg: `Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Alpin.15*`
   }[type]
   if (unreg) return conn.sendButton(m.chat, `Halo kak ${name} Sebelum menggunakan fitur ini Harap Verify Terlebih dahulu`, watermark, 'Verify', `#daftar ${name}.17`, { key: { fromMe: false, remoteJid: 'status@broadcast', participant: '0@s.whatsapp.net' }, message: { orderMessage: { message: `© AlpinXD\nJam ${time}`, itemCount: 2022, thumbnail: fs.readFileSync('./src/RadBotZ.jpg')}}})
 }
