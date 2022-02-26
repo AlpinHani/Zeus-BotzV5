@@ -4,13 +4,13 @@ let handler = async(m, { conn }) => {
     let kontol = `Kebijakan Privasi, Syarat Ketentuan dan Peraturan Sirad BOT
 
 Kebijakan Privasi
-1. RadBotZ tidak akan merekam data riwayat chat user.
-2. RadBotZ tidak akan menyebarkan nomor users.
-3. RadBotZ tidak akan menyimpan media yang dikirimkan oleh users.
-4. RadBotZ tidak akan menyalah gunakan data data users.
-5. Owner RadBotZ berhak melihat data riwayat chat users.
-6. Owner RadBotZ berhak melihat status users.
-7. Owner RadBotZ dapat melihat riwayat chat, dan media yang dikirimkan users.
+1. AlpinXD tidak akan merekam data riwayat chat user.
+2. AlpinXD tidak akan menyebarkan nomor users.
+3. AlpinXD tidak akan menyimpan media yang dikirimkan oleh users.
+4. AlpinXD tidak akan menyalah gunakan data data users.
+5. Owner AlpinXD berhak melihat data riwayat chat users.
+6. Owner AlpinXD berhak melihat status users.
+7. Owner AlpinXD dapat melihat riwayat chat, dan media yang dikirimkan users.
 
 Peraturan Sirad Bot
 1. Users dilarang menelpon maupun memvideo call nomor bot.
@@ -19,14 +19,14 @@ Peraturan Sirad Bot
 4. Users dilarang menambahkan nomor bot secara illegal, untuk menambahkan silahkan hubungi owner.
 5. Users diharap untuk tidak menyalah gunakan fitur fitur bot.
 
-Syarat Ketentuan Sirad Bot
+Syarat Ketentuan AlpinXD
 1. Bot akan keluar dari group apabila sudah waktunya keluar.
-2. RadBotZ dapat mem-ban users secara sepihak terlepas dari users salah atau tidak.
-3. RadBotZ *tidak akan bertanggungjawab atas apapun yang users lakukan terhadap fitur bot.*
-4. RadBotZ akan memberlakukan hukuman: block atau ban terhadap users yang melanggar peraturan.
-5. RadBotZ bertanggung jawab atas kesalahan fatal dalam programing maupun owner.
+2. AlpinXD dapat mem-ban users secara sepihak terlepas dari users salah atau tidak.
+3. AlpinXD *tidak akan bertanggungjawab atas apapun yang users lakukan terhadap fitur bot.*
+4. AlpinXD akan memberlakukan hukuman: block atau ban terhadap users yang melanggar peraturan.
+5. AlpinXD bertanggung jawab atas kesalahan fatal dalam programing maupun owner.
 
--Raditya
+-Alpin
 
 Peraturan: 1 Oktober 2021
 `.trim()
