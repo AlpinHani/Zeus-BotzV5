@@ -25,6 +25,7 @@ BIG THANKS TO
 •Rendycraft  
 •Nadin
 •Aca Mirabel
+•AlpinXD
 •Penyedia Layanan API
 •Orang-orang yang Berdonasi
 `.trim(), watermark, 'Back', '.menu')
