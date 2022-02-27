@@ -9,7 +9,7 @@ const anu = {
                         },
        message: {
                     documentMessage: {
-                    title: 'Hmm.jpeg', 
+                    title: '𝙰𝚕𝚙𝚒𝚗𝚇𝙳 ×፝֟͜×', 
                     jpegThumbnail: fs.readFileSync('./src/RadBotZ.jpg')
                           }
                         }
@@ -24,7 +24,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
   if (/webp/.test(mime)) {
     out = await webp2png(media)
   }
-  await conn.sendFile(m.chat, out, 'out.png', '©AlpinXD', anu, false, { thumbnail: fs.readFileSync('./src/RadBot.png')})
+  await conn.sendFile(m.chat, out, 'out.png', '©𝙰𝚕𝚙𝚒𝚗𝚇𝙳 ×፝֟͜×', anu, false, { thumbnail: fs.readFileSync('./src/RadBotZ.jpg')})
 }
 handler.help = ['toimg']
 handler.tags = ['sticker']
