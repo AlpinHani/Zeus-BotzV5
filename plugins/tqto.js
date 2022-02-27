@@ -12,7 +12,7 @@ BIG THANKS TO
 •Dawnfrosty
 •Rteam1
 •Beniismael
-•Raditya (gua)
+•Raditya
 •Furqan
 •Elyas
 •Rasel
