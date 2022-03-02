@@ -13,7 +13,7 @@ let handler  = async (m, { conn, usedPrefix }) => {
   let str = `
 ╠═〘 ${package.name} 〙 ═
 ╠➥ *Versi* : 1.5.0
-╠➥ *Homepage* : https://github.com/PilarV2
+╠➥ *Homepage* : ...............
 ╠➥ *Issue:* ${package.bugs.url}
 ╠➥ *Prefix:* ' ${usedPrefix} '
 ╠➥ *Menu:* ${usedPrefix}menu
@@ -45,7 +45,7 @@ let handler  = async (m, { conn, usedPrefix }) => {
 ╠═ Api xsteam :St4r
 ╠═ Resta
 ╠═ Ariq
-╠═〘 BOTRADITYA 〙 ═`.trim()
+╠═〘 BOTALPINXD 〙 ═`.trim()
      await conn.send2ButtonLoc(m.chat, await(await fetch(image)).buffer(), str, '©AlpinXD ⁩×͜×', 'Owner', '.owner', 'Menu', '.menu', m)
 }
 handler.help = ['infobot']
