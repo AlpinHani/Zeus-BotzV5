@@ -8,7 +8,7 @@ let handler = async (m, { conn }) => {
 ╠➥ *Sc Bot* : Private
 ╠═〘 PEMBAYARAN 〙 ═
 ╠➥ Dana Dan Pulsa
-║
+║➥ *082287750102*
 ╠═ Tertarik Untuk Beli Bot Ini?
 ╠➥Ketuk Tombol Di Bawah Ya
 ║
