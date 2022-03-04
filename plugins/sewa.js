@@ -12,7 +12,7 @@ let handler = async (m, { conn }) => {
 ║ ┅ ๑————————————๑
 ║┊ ⌲ Premium = _10k/minggu_
 ║┊ ⌲ Premium = _20k/bulan_
-║┊ ⌲ Premium = _35k/permanen
+║┊ ⌲ Premium = _30k/permanen_
 ╰═ ┅ ═══════
 
 
