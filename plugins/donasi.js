@@ -6,9 +6,10 @@ Hai 👋
 Kalian bisa mendukung saya agar bot ini tetap up to date dengan:
 ┌〔 Donasi • Emoney 〕
 ├ PULSA : 082287750102
-├ DANA : 085714313795
+├ DANA : 082287750102
+├ GOPAY: 082287750102
 └────
-`.trim(), 'Donasi bg Biar Bot Nya on 24Jam', 'SEWA', '.sewa')
+`.trim(), 'Donasi Banh Biar Bot Nya on 24Jam', 'SEWA', '.sewa')
 handler.help = ['donasi']
 handler.tags = ['info']
 handler.command = /^dona(te|si)$/i
