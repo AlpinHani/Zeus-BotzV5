@@ -5,8 +5,7 @@ let handler = async (m, { conn }) => {
 ╠➥ *1 Bulan* :      *Rp 10000*
 ╠➥ *Permanen* : *Rp 50000*
 ╠➥ *Owner* :   *Rp 30000*/bln
-╠➥ *Sc Bot* : 
-║https://github.com/Drz103/RadBot
+╠➥ *Sc Bot* : Private
 ╠═〘 PEMBAYARAN 〙 ═
 ╠➥ Dana Dan Pulsa
 ║
