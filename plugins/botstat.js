@@ -10,7 +10,7 @@ let handler = async (m, { conn }) => {
 
     let str = `
 ┌─〔 Info Alpin-XD 〕
-│Name: RadBotZ
+│Name: Alpin-XD
 │Main Owner: Alpin
 │Operated Since: 19 September 2021
 │Language Used: Nodejs (JS)
