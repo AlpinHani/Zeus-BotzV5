@@ -5,21 +5,30 @@ let path = require('path')
 let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
-  before: `
-┌─〔 Alpin-XD 〕
-├ Hai, *%name!*
-├ Limit: *%limit*
-├ Role: *%role*
-├ Mode: *${global.opts['self'] ? 'Private' : 'Publik'}*
-├ Runtime: *%uptime (%muptime)*
-├ Database: *%rtotalreg dari %totalreg*
-├ Memory Used : *${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB*
-└────
+before: `
+╭─────═[ *INFO PENGGUNA* ]═─────⋆
+│╭───────────────···
+┴│▸ *Name:* %name
+⬡│▸ *Premium:* %prems
+⬡│▸ *Limit:* %limit
+⬡│▸ *Role:* %role
+⬡│▸ *Level:* %level [%xp4levelup]
+⬡│▸ *Xp:* %exp / %maxexp
+┬│▸ *Total Xp:* %totalexp
+│╰────────────────···
+┠─────═[ *TODAY* ]═─────⋆
+│╭────────────────···
+┴│    *${ucapan()} %name!*
+⬡│▸ *Tanggal:* %week %weton, %date
+⬡│▸ *Tanggal Islam:* %dateIslamic
+⬡│▸ *Waktu:* %time
+   ╰────────────────···
 %readmore`.trimStart(),
-  header: '┌─〔 %category 〕',
-  body: '├ %cmd %islimit %isPremium',
-  footer: '└────\n',
-  after: `
+  header: '╭═[ *%category* ]═────···\n┴',
+  body: '│◌ ⃝✧⪼ %cmd %islimit %isPremium',
+  footer: '┬\n╰───────────···',
+  after:` ⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘ ⌕.
+     %me
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
@@ -329,18 +338,18 @@ function clockString(ms) {
 }
 function ucapan() {
   const time = moment.tz('Asia/Jakarta').format('HH')
-  res = "Selamat dinihari🌌"
+  res = "Selamat dinihari 🌌"
   if (time >= 4) {
-    res = "Selamat pagi🌅"
+    res = "Selamat pagi 🌄"
   }
   if (time > 10) {
-    res = "Selamat siang🏙️"
+    res = "Selamat siang ☀️"
   }
   if (time >= 15) {
-    res = "Selamat sore🌇"
+    res = "Selamat sore 🌇"
   }
   if (time >= 18) {
-    res = "Selamat malam🌃"
+    res = "Selamat malam 🌙"
   }
   return res
 }
