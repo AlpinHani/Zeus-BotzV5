@@ -10,7 +10,7 @@ let handler = async (m, { conn, participants, command, usedPrefix }) => {
 }
 handler.help = ['jodohin', 'jodohku']
 handler.tags = ['fun']
-handler.command = /^jodoh(in|ku)|moga langgeng:v$/i
+handler.command = /^jodoh(in|ku)|jadian$/i
 handler.group = true
 
 module.exports = handler
