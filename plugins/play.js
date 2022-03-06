@@ -1,3 +1,4 @@
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 const { servers, yta, ytv } = require('../lib/y2mate')
 let yts = require('yt-search')
 let fetch = require('node-fetch')
@@ -23,19 +24,46 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
       m.reply(`Server ${server} error!${servers.length >= i + 1 ? '' : '\nmencoba server lain...'}`)
     }
   }
+
   if (yt === false) throw 'semua server gagal'
   if (yt2 === false) throw 'semua server gagal'
   let { dl_link, thumb, title, filesize, filesizeF } = yt
-  await conn.send2ButtonLoc(m.chat, await (await fetch(thumb)).buffer(), `
-┏┉⌣ ┈̥-̶̯͡..̷̴✽̶┄┈┈┈┈┈┈┈┈┈┈┉┓
-┆ *PLAY YOUTUBE*
-└┈┈┈┈┈┈┈┈┈┈┈⌣ ┈̥-̶̯͡..̷̴✽̶⌣ ✽̶
-
-*💌 Judul:* ${title}
-*🎶 Audio:* ${filesizeF}
-*🎥 Video:* ${yt2.filesizeF}
-*💻 Server y2mate:* ${usedServer}
-`.trim(), wm, `🎶Audio (${filesizeF})`, `.yta ${vid.url}`, `🎥Video (${yt2.filesizeF})`, `.yt ${vid.url}`)
+    const ftrol = {
+    key : {
+    remoteJid: 'status@broadcast',
+    participant : '0@s.whatsapp.net'
+    },
+    message: {
+    orderMessage: {
+    itemCount : 2022,
+    status: 1,
+    surface : 1,
+    message: `❏ PLAY YOUTUBE`, 
+    orderTitle: `▮Menu ▸`,
+    thumbnail: await (await fetch('https://telegra.ph/file/147a17d5c5c296c53e793.jpg')).buffer(), //Gambarnye
+    sellerJid: '0@s.whatsapp.net' 
+    }
+    }
+    }
+  await conn.send3ButtonImg(m.chat, await (await fetch(thumb)).buffer(), `
+┏┉━━━━━━━━━━━❏
+┆• *Judul:* ${title}
+│• *Audio:* ${filesizeF}
+│• *Video:* ${yt2.filesizeF}
+┆• *Server:* ${usedServer}
+└❏
+`.trim(), global.botdate, `🎙️ Audio`, `.yta ${vid.url}`, `🎥 Video`, `.yt ${vid.url}`, '🔎 YouTube Search', `.yts ${title}`, ftrol, {
+    contextInfo: {
+        externalAdReply: {
+            title: '▶︎ ━━━━━━━•────────────────── ', 
+            body: 'Apa benar ini yang anda cari?',
+            description: 'Apa benar ini yang anda cari?',
+            mediaType: 2,
+          thumbnail: await (await fetch(thumb)).buffer(),
+         mediaUrl: `https://youtube.com/watch?v=uIedYGN3NQQ`
+        }
+     }
+    })
 }
 handler.help = ['play'].map(v => v + ' <pencarian>')
 handler.tags = ['downloader']
