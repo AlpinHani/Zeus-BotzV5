@@ -1,6 +1,6 @@
 let fs = require('fs')
 let handler = async (m) => {
-let stc = fs.readFileSync('./src/WS20211008120810477.webp')
+let stc = fs.readFileSync('./src/sukses.webp')
 function clockString(ms) {
   let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
   let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
@@ -9,7 +9,7 @@ function clockString(ms) {
   }
 conn.fakeReply(m.chat, stc, '0@s.whatsapp.net', `Uptime : ${clockString(process.uptime() * 1000)}\nBattery : ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? 'Pengisian Daya' : 'AlpinXD'}` : 'tidak diketahui'}`)
 }
-handler.customPrefix = /^(bot|RadBotZ|RadBotz)$/i
+handler.customPrefix = /^(bot|Alpin|pin)$/i
 handler.command = new RegExp
 
 module.exports = handler
