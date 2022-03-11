@@ -246,7 +246,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 *├֎ ${_p + command} 𝗧𝗮𝗻𝗽𝗮𝗞𝗮𝘁𝗲𝗴𝗼𝗿𝗶*
 *├֎ ${_p + command} 𝗢𝘄𝗻𝗲𝗿*
 *├֎ ${_p}Command*
-*└────•*`, 'Alpin-XD', 'Rules', '.rules', 'Owner', '.owner', m)
+*└────•*`, 'Alpin-XD', 'Donasi', '.donasi', 'Owner', '.owner', m)
 
     let groups = {}
     for (let tag in tags) {
