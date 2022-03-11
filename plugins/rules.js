@@ -1,50 +1,36 @@
 let fetch = require('node-fetch')
-let { MessageType } = require('@adiwajshing/baileys')
-let handler = async(m, { conn }) => {
-    let kontol = `Kebijakan Privasi, Syarat Ketentuan dan Peraturan Sirad BOT
+let handler = async (m, { conn }) => await conn.send2Button(m.chat, `
+╭─────[ *RULES* ]─────✧
+┴
+│¹ *Dilarang Hina Bot / Owner* 
+│² *Dilarang Spam Command* 
+│³ *Dilarang Kirim Virtex* 
+│⁴ *Dilarang Spam Menu Ga Jelas* 
+│⁵ *Dilarang Telp / Vc* 
+│⁶ *Dilarang Culik Bot* 
+│⁷ *Dilarang Promosi* 
+│⁸ *Dilarang Meniru pesan Bot* 
+│⁹ *Bot Tidak Menerima Save Kontak* 
+│¹⁰ *Dilarang Chat Owner Ga Jelas* 
+│¹¹ *No plagiat* 
+┬
+╰──────────···
 
-Kebijakan Privasi
-1. AlpinXD tidak akan merekam data riwayat chat user.
-2. AlpinXD tidak akan menyebarkan nomor users.
-3. AlpinXD tidak akan menyimpan media yang dikirimkan oleh users.
-4. AlpinXD tidak akan menyalah gunakan data data users.
-5. Owner AlpinXD berhak melihat data riwayat chat users.
-6. Owner AlpinXD berhak melihat status users.
-7. Owner AlpinXD dapat melihat riwayat chat, dan media yang dikirimkan users.
+╭─────[ *HUKUM* ]─────✧
+┴
+│ 1 & 11 = Block + banned permanent
+│ 2,4,6 & 8 = Banned sementara
+│ 3 = War
+│ 5 = Block sementara
+│ 9 & 10 = Block permanent
+┬
+╰──────────···
+Alpin-XD
+`.trim(), 'Harap patuhin peraturan tersebut', '⋮☰ Menu', '.menu', 'Donasi', '.donasi', m)
 
-Peraturan Sirad Bot
-1. Users dilarang menelpon maupun memvideo call nomor bot.
-2. Users dilarang mengirimkan berbagai bug, virtex, dll ke nomor bot.
-3. Users diharap tidak melakukan spam dalam penggunaan bot.
-4. Users dilarang menambahkan nomor bot secara illegal, untuk menambahkan silahkan hubungi owner.
-5. Users diharap untuk tidak menyalah gunakan fitur fitur bot.
-
-Syarat Ketentuan AlpinXD
-1. Bot akan keluar dari group apabila sudah waktunya keluar.
-2. AlpinXD dapat mem-ban users secara sepihak terlepas dari users salah atau tidak.
-3. AlpinXD *tidak akan bertanggungjawab atas apapun yang users lakukan terhadap fitur bot.*
-4. AlpinXD akan memberlakukan hukuman: block atau ban terhadap users yang melanggar peraturan.
-5. AlpinXD bertanggung jawab atas kesalahan fatal dalam programing maupun owner.
-
--Alpin
-
-Peraturan: 1 Oktober 2021
-`.trim()
-  const button = {
-        buttonText: 'Klik Di sini',
-        description: kontol,
-        sections:  [{title: "Silahkan di pilih gausah pilih yang gaada", rows: [
-        {title: 'Menu Utama', description: "Kembali ke Menu Utama", rowId:".?"},
-        {title: 'Sewa Bot', description: "Sewa bot dengan memasukkan bot ke grup kamu", rowId:".sewa"},
-        {title: 'Cara Invit?', description: "Cara Memasukkan Bot Di GC", rowId:".tutorbot"},
-        {title: 'Nomor Owner', description: "CHAT *P* TIDAK DI BALAS", rowId:".owner"},
-       ] }],
-        listType: 1
-       }
-    conn.sendMessage(m.chat, button, MessageType.listMessage, { quoted: m })
-}
-
-handler.tags = ['main', 'update']
-handler.command = /^(rules|rule)$/i
 handler.help = ['rules']
+handler.tags = ['info']
+
+handler.command = /^(rules|peraturan)$/i
+
 module.exports = handler
