@@ -5,7 +5,7 @@ let path = require('path')
 let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
-before: `
+  before: `
 ╭─────═[ *INFO PENGGUNA* ]═─────⋆
 │╭───────────────···
 ┴│▸ *Name:* %name
@@ -25,7 +25,7 @@ before: `
    ╰────────────────···
 %readmore`.trimStart(),
   header: '╭═[ *%category* ]═────···\n┴',
-  body: '│◌ ⃝✧⪼ %cmd %islimit %isPremium',
+  body: '│☙ ⃝✿⪼ %cmd %islimit %isPremium',
   footer: '┬\n╰───────────···',
   after:` ⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘ ⌕.
      %me
@@ -215,45 +215,38 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       }
     })
     if (teks == '404') return conn.send2ButtonLoc(m.chat, await(await fetch(fla + 'menu')).buffer(), 
-`┌〔 DAFTAR MENU 〕─➤
-┏━━ ✘ Status ✘ ━━ ➤
-┃⬡ ☁️ Runtime ${uptime}
-(${muptime})
-┃⬡ ⛔ *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
-┃⬡🪀 *${totaljadibot.length}* Jadibot
-┃⬡ 🚧 *${conn.blocklist.length}* Terblock
-┃⬡ 📈 *${Object.keys(global.db.data.users).length}* Pengguna
-┃⬡ 🚫 *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
-┃⬡📱 *Database: ${rtotalreg} dari ${totalreg}*
-┃⬡ 🔋 *${conn.battery != undefined ? `${conn.battery.value}%* ${conn.battery.live ? '🔌 pengisian' : ''}` : ' tidak diketahui'}
-└─────────────────➤
-├➣ ${_p + command} All
-├➢ ${_p + command} Game
-├➣ ${_p + command} Rpg
-├➢ ${_p + command} Jadian
-├➣ ${_p + command} Exp
-├➢ ${_p + command} Sticker
-├➣ ${_p + command} Kerangajaib
-├➢ ${_p + command} Photo
-├➣ ${_p + command} Quotes
-├➢ ${_p + command} Admin
-├➣ ${_p + command} Grup
-├➢ ${_p + command} Premium
-├➣ ${_p + command} Internet
-├➢ ${_p + command} Anonymous
-├➣ ${_p + command} Nulis
-├➢ ${_p + command} Downloader
-├➣ ${_p + command} Tools
-├➢ ${_p + command} Fun
-├➣ ${_p + command} Database
-├➢ ${_p + command} Vote
-├➣ ${_p + command} Quran
-├➢ ${_p + command} Audio
-├➣ ${_p + command} Jadibot
-├➢ ${_p + command} Info
-├➣ ${_p + command} Nokategori
-├➢ ${_p + command} Owner
-└─────────────────➤`, 'Alpin-XD', 'Donasi', '.donasi', 'Owner', '.owner', m)
+`┌──═[ 𝗗𝗔𝗙𝗧𝗔𝗥 𝗠𝗘𝗡𝗨 ]═──⋆ 
+*├֍ ${_p + command} 𝗔𝗹𝗹*
+*├֎ ${_p + command} 𝗚𝗮𝗺𝗲*
+*├֎ ${_p + command} 𝗥𝗽𝗴*
+*├֎ ${_p + command} 𝗝𝗮𝗱𝗶𝗮𝗻*
+*├֎ ${_p + command} 𝘅𝗽*
+*├֎ ${_p + command} 𝗦𝘁𝗶𝗸𝗲𝗿*
+*├֎ ${_p + command} 𝗞𝗲𝗿𝗮𝗻𝗴𝗔𝗷𝗮𝗶𝗯*
+*├֎ ${_p + command} 𝗤𝘂𝗼𝘁𝗲𝘀*
+*├֎ ${_p + command} 𝗔𝗱𝗺𝗶𝗻*
+*├֎ ${_p + command} 𝗚𝗿𝘂𝗽*
+*├֎ ${_p + command} 𝗣𝗿𝗲𝗺𝗶𝘂𝗺*
+*├֎ ${_p + command} 𝗣𝗵𝗼𝘁𝗼*
+*├֎ ${_p + command} 𝗘𝗱𝗶𝘁𝗼𝗿*
+*├֎ ${_p + command} 𝗠𝗮𝗸𝗲𝗿*
+*├֎ ${_p + command} 𝗧𝗲𝘅𝘁𝗣𝗿𝗼𝗠𝗲*
+*├֎ ${_p + command} 𝗜𝗻𝘁𝗲𝗿𝗻𝗲𝘁*
+*├֎ ${_p + command} 𝗔𝗻𝗼𝗻𝘆𝗺𝗼𝘂𝘀*
+*├֎ ${_p + command} 𝗡𝘂𝗹𝗶𝘀*
+*├֎ ${_p + command} 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗿*
+*├֎ ${_p + command} 𝗧𝗼𝗼𝗹𝘀*
+*├֎ ${_p + command} 𝗙𝘂𝗻*
+*├֎ ${_p + command} 𝗗𝗮𝘁𝗮𝗯𝗮𝘀𝗲*
+*├֎ ${_p + command} 𝗩𝗼𝘁𝗲*
+*├֎ ${_p + command} 𝗤𝘂𝗿𝗮𝗻*
+*├֎ ${_p + command} 𝗔𝘂𝗱𝗶𝗼*
+*├֎ ${_p + command} 𝗝𝗮𝗱𝗶𝗕𝗼𝘁*
+*├֎ ${_p + command} 𝗜𝗻𝗳𝗼*
+*├֎ ${_p + command} 𝗧𝗮𝗻𝗽𝗮𝗞𝗮𝘁𝗲𝗴𝗼𝗿𝗶*
+*├֎ ${_p + command} 𝗢𝘄𝗻𝗲𝗿*
+*├֎ ${_p}Command*
+*└────•*`, 'Alpin-XD', 'Rules', '.rules', 'Owner', '.owner', m)
 
     let groups = {}
     for (let tag in tags) {
@@ -338,15 +331,15 @@ function clockString(ms) {
 }
 function ucapan() {
   const time = moment.tz('Asia/Jakarta').format('HH')
-  res = "Selamat dinihari 🌌"
+  res = "Jangan lupa tidur ya lop you <3"
   if (time >= 4) {
-    res = "Selamat pagi 🌄"
+    res = "Selamat pagi 🌞"
   }
   if (time > 10) {
     res = "Selamat siang ☀️"
   }
   if (time >= 15) {
-    res = "Selamat sore 🌇"
+    res = "Selamat sore 🌥️"
   }
   if (time >= 18) {
     res = "Selamat malam 🌙"
