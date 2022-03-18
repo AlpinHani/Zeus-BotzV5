@@ -25,7 +25,6 @@ const defaultMenu = {
    ╰────────────────···
 %readmore`.trimStart(),
   header: '╭═[ *%category* ]═────···\n┴',
- ┴
   body: '│➥ %cmd %islimit %isPremium',
   footer: '╰─────────────❖\n',
   after: `
