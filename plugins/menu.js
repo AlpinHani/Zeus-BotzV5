@@ -25,12 +25,14 @@ const defaultMenu = {
    ╰────────────────···
 %readmore`.trimStart(),
   header: '╭═[ *%category* ]═────···\n┴',
-  body: '│☙ ⃝✿⪼ %cmd %islimit %isPremium',
-  footer: '┬\n╰───────────···',
-  after:` ⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘ ⌕.
-     %me
+ ┴
+  body: '│➥ %cmd %islimit %isPremium',
+  footer: '╰─────────────❖\n',
+  after: `
+*%npmname %version*
+${'```%npmdesc```'}
 `,
-}
+};
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   let tags
   let teks = `${args[0]}`.toLowerCase()
@@ -215,38 +217,38 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       }
     })
     if (teks == '404') return conn.send2ButtonLoc(m.chat, await(await fetch(fla + 'menu')).buffer(), 
-`┌──═[ 𝗗𝗔𝗙𝗧𝗔𝗥 𝗠𝗘𝗡𝗨 ]═──⋆ 
-*├֍ ${_p + command} 𝗔𝗹𝗹*
-*├֎ ${_p + command} 𝗚𝗮𝗺𝗲*
-*├֎ ${_p + command} 𝗥𝗽𝗴*
-*├֎ ${_p + command} 𝗝𝗮𝗱𝗶𝗮𝗻*
-*├֎ ${_p + command} 𝘅𝗽*
-*├֎ ${_p + command} 𝗦𝘁𝗶𝗸𝗲𝗿*
-*├֎ ${_p + command} 𝗞𝗲𝗿𝗮𝗻𝗴𝗔𝗷𝗮𝗶𝗯*
-*├֎ ${_p + command} 𝗤𝘂𝗼𝘁𝗲𝘀*
-*├֎ ${_p + command} 𝗔𝗱𝗺𝗶𝗻*
-*├֎ ${_p + command} 𝗚𝗿𝘂𝗽*
-*├֎ ${_p + command} 𝗣𝗿𝗲𝗺𝗶𝘂𝗺*
-*├֎ ${_p + command} 𝗣𝗵𝗼𝘁𝗼*
-*├֎ ${_p + command} 𝗘𝗱𝗶𝘁𝗼𝗿*
-*├֎ ${_p + command} 𝗠𝗮𝗸𝗲𝗿*
-*├֎ ${_p + command} 𝗧𝗲𝘅𝘁𝗣𝗿𝗼𝗠𝗲*
-*├֎ ${_p + command} 𝗜𝗻𝘁𝗲𝗿𝗻𝗲𝘁*
-*├֎ ${_p + command} 𝗔𝗻𝗼𝗻𝘆𝗺𝗼𝘂𝘀*
-*├֎ ${_p + command} 𝗡𝘂𝗹𝗶𝘀*
-*├֎ ${_p + command} 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗿*
-*├֎ ${_p + command} 𝗧𝗼𝗼𝗹𝘀*
-*├֎ ${_p + command} 𝗙𝘂𝗻*
-*├֎ ${_p + command} 𝗗𝗮𝘁𝗮𝗯𝗮𝘀𝗲*
-*├֎ ${_p + command} 𝗩𝗼𝘁𝗲*
-*├֎ ${_p + command} 𝗤𝘂𝗿𝗮𝗻*
-*├֎ ${_p + command} 𝗔𝘂𝗱𝗶𝗼*
-*├֎ ${_p + command} 𝗝𝗮𝗱𝗶𝗕𝗼𝘁*
-*├֎ ${_p + command} 𝗜𝗻𝗳𝗼*
-*├֎ ${_p + command} 𝗧𝗮𝗻𝗽𝗮𝗞𝗮𝘁𝗲𝗴𝗼𝗿𝗶*
-*├֎ ${_p + command} 𝗢𝘄𝗻𝗲𝗿*
-*├֎ ${_p}Command*
-*└────•*`, 'Alpin-XD', 'Donasi', '.donasi', 'Owner', '.owner', m)
+`┌──═[ 𝗗𝗔𝗙𝗧𝗔𝗥 𝗠𝗘𝗡𝗨 ]═──⋆
+*├⪼ ${_p + command} All*
+*├⪼ ${_p + command} Game*
+*├⪼ ${_p + command} Rpg*
+*├⪼ ${_p + command} Jadian*
+*├⪼ ${_p + command} Xp*
+*├⪼ ${_p + command} Stiker*
+*├⪼ ${_p + command} KerangAjaib*
+*├⪼ ${_p + command} Quotes*
+*├⪼ ${_p + command} Admin*
+*├⪼ ${_p + command} Grup*
+*├⪼ ${_p + command} Premiun*
+*├⪼ ${_p + command} Photo*
+*├⪼ ${_p + command} Editor*
+*├⪼ ${_p + command} Maker*
+*├⪼ ${_p + command} TextProMe*
+*├⪼ ${_p + command} Internet*
+*├⪼ ${_p + command} Anonymous*
+*├⪼ ${_p + command} Nulis*
+*├⪼ ${_p + command} Downloader*
+*├⪼ ${_p + command} Tools*
+*├⪼ ${_p + command} Fun*
+*├⪼ ${_p + command} Database*
+*├⪼ ${_p + command} Vote*
+*├⪼ ${_p + command} Quran*
+*├⪼ ${_p + command} Audio*
+*├⪼ ${_p + command} Jadibot*
+*├⪼ ${_p + command} Info*
+*├⪼ ${_p + command} TanpaKategori*
+*├⪼ ${_p + command} Owner*
+*├⪼ ${_p}Command*
+*└────•*`, '𝙷𝙰𝙽-𝙿𝙸𝙽', 'Donasi', '.donasi', 'Owner', '.owner', m)
 
     let groups = {}
     for (let tag in tags) {
