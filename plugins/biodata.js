@@ -1,30 +1,61 @@
+const { MessageType } = require('@adiwajshing/baileys')
 let fetch = require('node-fetch')
+let fs = require('fs')
 let handler = async (m, { conn, text }) => {
+let logo = global.logoowner
   let ext= `
-*BIODATA OWNER*
+*«───────[ BIODATA OWNER ]───────»*
+*💌 Nama* : Alpin
+*✉️ Nama RL* : Pin
+*♂️ Gender* : Laki - laki
+*🕋 Agama* : Islam
+*⏰ Tanggal lahir* : 08 April 2006
+*🎨 Umur* : 15
+*🧮 Kelas* : 9
+*🧩 Hobby* : Nonton anime, main game, Recode script
+*💬 Sifat* : Baik, hode, softboy, tydack ramah, g*y
+*🗺️ Tinggal* : Pekanbaru/Riau
+*❤️ Suka* : warnah pink & biru, anime, waifu wangy, kucing
+*💔 Benci* : kecoa, autis, anak epep
 
-*Nama* : Alpin
-*Umur* : 15
-*Kelas* : 3 Smp
-*Status* : Private
+*───────[ SOSIAL MEDIA ]───────*
+*📷 instagram* : @en4y.pin
+*🇫  Facebook* : none
+*🏮 Tiktok* : En4y.Pin
+*🐈 Github:* AlpinHani
+`
+let name = await conn.getName(m.sender)
 
-*SOSIAL MEDIA*
+let fkon = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `BIODATA OWNER`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:'BIODATA OWNER'\nitem1.TEL;waid=6282287750102:6282287750102\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
 
-*instagram* : en4y.pin
-*Facebook* : Private
-*Chanel Youtube* : none
-*Gmail* : Xnxx@gmail.com
-*Github* : none
-
-_Oke udah itu aja terimakasih_
-
-`.trim()
-conn.send3ButtonLoc(m.chat, await (await fetch(fla + 'Raditya')).buffer(), ext, 'Recoded By Raditya', 'Nomor Owner', '.owner', 'Donasi', '.donasi', 'Sewa Bot', '.sewa', m)
+  sumberImg = fs.readFileSync(`./ppowner.jpg`)
+  image = (await conn.prepareMessage('0@s.whatsapp.net', sumberImg, MessageType.image, { thumbnail: Buffer.alloc(0) })).message.imageMessage
+  res = await conn.prepareMessageFromContent(m.chat, {
+    "productMessage": {
+      "product": {
+        "productImage": image,
+        "productId": "4938174216214248",
+        "title": "",
+        "description": '\n\n' + ext,
+        "retailerId": "",
+        "url": '',
+        "descriptionCount": "999999999",
+        "productImageCount": "1",
+      },
+      "businessOwnerJid": "6282287750102@s.whatsapp.net",
+      "contextInfo": {
+        "forwardingScore": 9999,
+        "isForwarded": false
+      }
+    }
+  },
+    { quoted: fkon })
+  conn.relayWAMessage(res)
 
 }
-handler.help = ['infoowner', 'infocreator']
+handler.help = ['biodataowner', 'infoowner']
 handler.tags = ['info']
-handler.command = /^(infoowner|infocreator)$/i
+handler.command = /^(biodata(owner)?|infoowner)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
@@ -37,3 +68,5 @@ handler.botAdmin = false
 handler.fail = null
 
 module.exports = handler
+
+let wm = global.botwm
