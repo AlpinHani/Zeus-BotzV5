@@ -3,12 +3,12 @@ let _uptime = process.uptime() * 1000
 let uptime = clockString(_uptime)
 let time = require('moment-timezone').tz('Asia/Jakarta').format('HH:mm:ss')
 let runnya = `
-*───「 RUNTIME BOT 」───*
-
-Time : ${time}
-Runtime : ${uptime}
+┌─〔 R U N T I M E 〕
+├ Bot Aktif Selama ${uptime}
+├ Battery ${conn.battery.value}%
+└────
 `
-conn.sendButton(m.chat, runnya, watermark, 'Menu', '.menu', m) 
+conn.sendButton(m.chat, runnya, watermark, '⚡ Speed', '.ping', m) 
 }
 handler.help = ['runtime']
 handler.tags = ['info']
