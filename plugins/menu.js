@@ -12,41 +12,41 @@ const chats = conn.chats.all()
 const groups = chats.filter(v => v.jid.endsWith('g.us'))
  
 const defaultMenu = {
-  before: `✗────━⃝┅ *D A S H B O A R D* ┅⃝━────✗
+  before: `
   
                「 *U S E R* 」
-🌻 *Name:* %name
-🌻 *Tags:* %tag
-🌻 *Age:* %age
-🌻 *Limit:* %limit
-🌻 *Money:* %money
-🌻 *Role:* %role
-🌻 *Level:* %level [%xp4levelup]
-🌻 *Xp:* %exp / %maxexp
-🌻 *Total Xp:* %totalexp
+✾ *Name:* %name
+✾ *Tags:* %tag
+✾ *Age:* %age
+✾ *Limit:* %limit
+✾ *Money:* %money
+✾ *Role:* %role
+✾ *Level:* %level [%xp4levelup]
+✾ *Xp:* %exp / %maxexp
+✾ *Total Xp:* %totalexp
 
                「 *T O D A Y* 」
 *${ucapan()}!*
-🌻 *Days:* %week %weton
-🌻 *Date:* %date
-🌻 *Islamic Date:* %dateIslamic
-🌻 *Time:* %wib
+✾ *Days:* %week %weton
+✾ *Date:* %date
+✾ *Islamic Date:* %dateIslamic
+✾ *Time:* %wib
 
                「 *I N F O* 」
-🌻 *Bot Name:* %me
-🌻 *Mode:* %mode
-🌻 *Prefix:* [ %_p ]
-🌻 *Platform:* %platform
-🌻 *Uptime:* %muptime
-🌻 *Database:* %rtotalreg dari %totalreg
+✾ *Bot Name:* %me
+✾ *Mode:* %mode
+✾ *Prefix:* [ %_p ]
+✾ *Platform:* %platform
+✾ *Uptime:* %muptime
+✾ *Database:* %rtotalreg dari %totalreg
 
 「 *I N F O  C M D* 」
 *Ⓟ* = Premium
 *Ⓛ* = Limit
 `.trimStart(),
-  header: '╭──────━• *%category* •━──────┐',
-  body: '│»❥%cmd %isPremium %islimit',  
-  footer: '╰──────────━⃝┅⃝━────────┘',
+  header: '╭────ꕥ *%category* ꕥ────',
+  body: '│ ✾%cmd %isPremium %islimit',  
+  footer: '╰❑',
   after: `\n⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘ ⌕
      %me
 `,
@@ -451,7 +451,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 
 let ftt = `©️ Recode By Alpin`
     if (teks == '404') {
-      return conn.send3Button(m.chat, tksk, ftt, 'COMMAND', '.? all', 'DONASI', '.donasi', 'OWNER', '.owner', ftrol, { contextInfo: { mentionedJid: conn.parseMention(tksk)}})
+      return conn.send3Button(m.chat, tksk, ftt, '📮 COMMAND', '.? all', '💌 DONASI', '.donasi', '🙇🏻 OWNER', '.owner', ftrol, { contextInfo: { mentionedJid: conn.parseMention(tksk)}})
   
     }
         
