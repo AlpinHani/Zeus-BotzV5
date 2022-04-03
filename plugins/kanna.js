@@ -4,7 +4,7 @@ let res = await (await fetch('https://raw.githubusercontent.com/Alfarqun/databas
  if (!res.ok) throw await `${res.status} ${res.statusText}`; 
  let json = await res.json(); 
  let url = json[Math.floor(Math.random() * json.length)] 
-await conn.sendButtonImg(m.chat, await (await fetch(url)).buffer(), 'Kawai > _<', watermark, 'NEXT', `${usedPrefix + command}`, m)
+await conn.sendButtonImg(m.chat, await (await fetch(url)).buffer(), 'Punya Gw >_<', watermark, '➡️ NEXT', `${usedPrefix + command}`, m)
 }
 
 handler.help = ['kanna']
